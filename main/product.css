@@ -1,0 +1,414 @@
+ {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: relative;
+  background-color: rgb(252 90 49);
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+.HomeHeader {
+  min-width: 980px;
+  height: auto;
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+.HeaderTitle {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.TitleLeft {
+  display: flex;
+  height: 24px;
+  align-items: flex-start;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+a {
+  color: rgb(255, 255, 255);
+  line-height: normal;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: grap;
+  display: block;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.TitleRight {
+  display: flex;
+  height: auto;
+  align-items: flex-end;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.TitleRight-Menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grap;
+  padding: 5px 5px;
+}
+.TitleRight-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.HeaderMiddle {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+}
+.MiddleIcon {
+  display: flex;
+  flex-shrink: 0;
+  flex-basis: unset;
+  align-items: flex-start;
+}
+.Logo {
+  justify-content: center;
+}
+.Shopee-logo {
+  width: 100px;
+  height: 34px;
+}
+.logo-icon {
+  width: 100%;
+  height: 100%;
+}
+.MiddleSearch {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  flex: 1 1 0%;
+}
+.FromSearch {
+  display: flex;
+  width: 80%;
+  position: relative;
+  border-radius: 1px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  margin-left: 10px;
+}
+.SearchText {
+  width: 100%;
+  padding: 0px 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255);
+  justify-content: flex-start;
+  line-height: calc(80%);
+  outline: none;
+}
+.SearchButton {
+  width: 60px;
+  height: 35px;
+  background-color: rgb(251, 85, 51);
+  margin: 2px 2px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid rgb(255, 255, 255);
+}
+.SearchIcon {
+  width: 15px;
+  height: 15px;
+  margin: 5px 5px;
+  justify-content: center;
+}
+.MiddleCart {
+  position: relative;
+  width: 50px;
+  height: 50 px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CartIcon {
+  width: 80%;
+  height: 80%;
+}
+.ListItem {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.Item {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 100;
+  display: block;
+  cursor: grab;
+  text-decoration: none;
+}
+.Home {
+  background-color: rgb(245, 245, 245);
+}
+.Home-main {
+  margin: 50px auto 0px;
+  display: flex;
+  width: 1200px;
+  height: 500px;
+  background-color: white;
+}
+.Product {
+  width: 450px;
+  flex-shrink: 0;
+  position: relative;
+}
+.img {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+.Description {
+  margin: 30px;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+.Name {
+  font-size: 20px;
+  line-height: 10px;
+  vertical-align: sub;
+}
+.Rating {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+.Rating_number {
+  font-size: 30px;
+  color: #d0011b;
+  text-decoration: #d0011b underline solid;
+  padding: 10px;
+}
+.Rating_star {
+  font-size: 36px;
+  text-transform: capitalize;
+  display: flex;
+}
+.Star {
+  margin-left: 5px;
+  width: 14px;
+  position: relative;
+}
+.Start5 {
+  position: relative;
+  left: 14px;
+  top: 0;
+  right: 0;
+}
+.Star-half {
+  z-index: 1;
+}
+.start-half {
+  position: absolute;
+}
+
+.Description_price {
+  display: flex;
+  margin-top: 25px;
+}
+.Price_title {
+  color: #444;
+  font-size: 25px;
+}
+.Price {
+  color: #d0011b;
+  margin-left: 20px;
+  font-size: 25px;
+}
+.Description_color {
+  display: flex;
+  align-items: baseline;
+  margin-top: 25px;
+}
+.color_title {
+  width: 110px;
+  text-transform: capitalize;
+  color: #444;
+  font-size: 25px;
+  padding-top: 20px;
+}
+.Button_color {
+  display: flex;
+  flex-wrap: wrap;
+  width: 290px;
+}
+.color {
+  background-color: rgb(208, 1, 27);
+  color: white;
+  opacity: 0.4;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 30px;
+  border: 0;
+  border-radius: 2px;
+  min-width: 80px;
+}
+.color_click {
+  background-color: rgb(208, 1, 27);
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 30px;
+  border: 0;
+  border-radius: 2px;
+  min-width: 80px;
+}
+.Description_quantity {
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+}
+.Quan_title {
+  text-transform: capitalize;
+  color: #444;
+  font-size: 20px;
+}
+.Quantity_input {
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.Order {
+  margin-top: 25px;
+}
+.button_order {
+  height: 30px;
+  background-color: rgb(251, 235, 237);
+  color: #d0011b;
+  border: 1px solid #d0011b;
+  cursor: pointer;
+}
+.Comment {
+  display: flex;
+  width: 1200px;
+  background-color: white;
+  margin: 50px auto 0px;
+  flex-direction: column;
+}
+.Comment_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.Title {
+  padding: 30px 20px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+.Comment_list {
+  display: flex;
+}
+.Commenr_list-rating {
+  display: flex;
+  padding: 20px 0px 30px 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+.Comment_avtar {
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+.avtar {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.Rating-name {
+  display: flex;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.Comment_rating {
+  display: flex;
+}
+.Rating_star {
+  display: flex;
+  height: 20px;
+  margin-top: 10px;
+}
+.Rating-comment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 20px;
+}
+.Comment_comment-list {
+  position: relative;
+  box-sizing: border-box;
+  word-break: break-word;
+  margin-top: 20px;
+}
+.Comment_list-title {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+.Comment_text {
+  margin-top: 10px;
+  word-wrap: break-word;
+  width: 600px;
+}
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star {
+  display: none;
+}
+
+label.star {
+  float: right;
+  font-size: 20px;
+  color: #444;
+  transition: all 0.2s;
+  color: #ee4d2d;
+}
+
+input.star:checked ~ label.star:before {
+  content: "\f005";
+  color: #ee4d2d;
+  transition: all 0.25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #ee4d2d;
+}
+
+input.star-1:checked ~ label.star:before {
+  color: #ee4d2d;
+}
+
+label.star:hover {
+  transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+  content: "\f006";
+  font-family: FontAwesome;
+}

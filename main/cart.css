@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.Home {
+  background-color: rgb(245, 245, 245);
+}
+.List_item {
+  padding: 20px 50px;
+}
+.List_title {
+  height: 55px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  font-size: 14px;
+  align-items: center;
+}
+.Title_item1 {
+  width: 45.3%;
+  padding: 10px;
+  text-align: center;
+}
+.Title_item2 {
+  text-align: center;
+}
+.Title_item3 {
+  width: 15.4%;
+  text-align: center;
+  margin-left: 30px;
+}
+.Title_item4 {
+  width: 10.4%;
+  text-align: center;
+}
+.Title_item5 {
+  width: 12.7%;
+  text-align: center;
+  margin-left: 40px;
+}
+.Check-box {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 10px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.stardus-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: default;
+  color: rgba(0, 0, 0, 0.54);
+  /* background: rgb(238, 77, 45); */
+}
+.Item {
+  height: 100px;
+  margin: 10px 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  width: 40.3%;
+  position: relative;
+}
+.Title {
+  margin-left: 30px;
+  padding-top: 10px;
+}
+.Price {
+  text-align: start;
+  padding-top: 30px;
+}
+.Quantity {
+  width: 15.4%;
+  text-align: center;
+  padding-top: 30px;
+}
+.Total {
+  width: 10.4%;
+  color: red;
+  margin-left: 38px;
+  padding-top: 30px;
+}
+.button {
+  width: 12.7%;
+  cursor: pointer;
+  margin-left: 20px;
+  border: 0;
+  height: 20px;
+  background-color: white;
+  padding-top: 30px;
+}
+.img {
+  width: 88px;
+  height: 80px;
+}
+.Payment {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 20px;
+}
+.Payment_title {
+  margin-right: 20px;
+}
+.Payment_total {
+  color: #ee4d2d;
+  margin-right: 10px;
+}
+.Button-payment {
+  align-items: flex-end;
+  width: 80px;
+  height: 35px;
+  background-color: rgb(238, 77, 45);
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
