@@ -13,7 +13,7 @@ body {
 }
 .HomeHeader {
   min-width: 980px;
-  height: auto;
+  height: 60px;
   display: flex;
   padding-left: 100px;
   padding-right: 100px;
@@ -21,71 +21,14 @@ body {
   margin-right: auto;
   flex-direction: column;
 }
-.HeaderTitle {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-.TitleLeft {
-  display: flex;
-  height: 24px;
-  align-items: flex-start;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-a {
-  color: rgb(255, 255, 255);
-  line-height: normal;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: grap;
-  display: block;
-  margin-left: 15px;
-  text-decoration: none;
-}
-.TitleRight {
-  display: flex;
-  height: auto;
-  align-items: flex-end;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-.TitleRight-Menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: grap;
-  padding: 5px 5px;
-}
-.TitleRight-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
 .HeaderMiddle {
   position: relative;
   justify-content: space-between;
   display: flex;
+  padding-top: 10px;
 }
-.MiddleIcon {
-  display: flex;
-  flex-shrink: 0;
-  flex-basis: unset;
-  align-items: flex-start;
-}
-.Logo {
-  justify-content: center;
-}
-.Shopee-logo {
-  width: 100px;
-  height: 34px;
-}
-.logo-icon {
-  width: 100%;
-  height: 100%;
-}
+
 .MiddleSearch {
   width: 100%;
   height: 40px;
@@ -142,23 +85,6 @@ a {
   width: 80%;
   height: 80%;
 }
-.ListItem {
-  width: 100%;
-  display: flex;
-  position: relative;
-  margin-left: 30px;
-  margin-top: 10px;
-  justify-content: center;
-}
-.Item {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  margin-left: 10px;
-  font-weight: 100;
-  display: block;
-  cursor: grab;
-  text-decoration: none;
-}
 .Home {
   background-color: rgb(245, 245, 245);
 }
@@ -190,41 +116,19 @@ a {
   line-height: 10px;
   vertical-align: sub;
 }
-.Rating {
-  display: flex;
-  width: 100%;
-  height: 50px;
+.Description_text {
   margin-top: 20px;
-}
-.Rating_number {
-  font-size: 30px;
-  color: #d0011b;
-  text-decoration: #d0011b underline solid;
-  padding: 10px;
-}
-.Rating_star {
-  font-size: 36px;
-  text-transform: capitalize;
+  font-size: 20px;
+  height: auto;
   display: flex;
+  flex-wrap: nowrap;
 }
-.Star {
-  margin-left: 5px;
-  width: 14px;
-  position: relative;
+.Description_image {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  line-height: normal;
 }
-.Start5 {
-  position: relative;
-  left: 14px;
-  top: 0;
-  right: 0;
-}
-.Star-half {
-  z-index: 1;
-}
-.start-half {
-  position: absolute;
-}
-
 .Description_price {
   display: flex;
   margin-top: 25px;
@@ -238,44 +142,7 @@ a {
   margin-left: 20px;
   font-size: 25px;
 }
-.Description_color {
-  display: flex;
-  align-items: baseline;
-  margin-top: 25px;
-}
-.color_title {
-  width: 110px;
-  text-transform: capitalize;
-  color: #444;
-  font-size: 25px;
-  padding-top: 20px;
-}
-.Button_color {
-  display: flex;
-  flex-wrap: wrap;
-  width: 290px;
-}
-.color {
-  background-color: rgb(208, 1, 27);
-  color: white;
-  opacity: 0.4;
-  cursor: pointer;
-  margin-left: 10px;
-  height: 30px;
-  border: 0;
-  border-radius: 2px;
-  min-width: 80px;
-}
-.color_click {
-  background-color: rgb(208, 1, 27);
-  color: white;
-  cursor: pointer;
-  margin-left: 10px;
-  height: 30px;
-  border: 0;
-  border-radius: 2px;
-  min-width: 80px;
-}
+
 .Description_quantity {
   display: flex;
   margin-top: 25px;
@@ -344,6 +211,7 @@ a {
   font-size: 15px;
   color: rgba(0, 0, 0, 0.87);
 }
+
 .Comment_rating {
   display: flex;
 }

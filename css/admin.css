@@ -28,9 +28,6 @@
   padding: 10px 25px 30px;
 }
 .Fun_item {
-  display: flex;
-  position: relative;
-  align-items: center;
   margin-right: 1px;
   font-size: 20px;
   color: white;
@@ -57,12 +54,36 @@
   margin-top: 10px;
 }
 .Button_item {
-  width: 100px;
+  width: 150px;
   height: 50px;
   font-size: 15px;
   margin-left: 20px;
+}
+.Bt-item {
+  text-align: center;
+  text-decoration: none;
+}
+.Category {
+  width: 100%;
+  height: 60px;
   display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.Category_item {
+  width: 150px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+.List_item {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+.List_item:active {
+  color: rgb(201, 160, 235);
 }
 .List_item1 {
   display: flex;
@@ -81,19 +102,7 @@
   margin-top: 15px;
   height: 200px;
 }
-.List_item_1 {
-  display: flex;
-  position: relative;
-  margin-left: 10px;
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
-  padding: 5px;
-}
-.img {
-  width: 100%;
-  height: 90%;
-}
+
 .List_item2 {
   display: flex;
   position: relative;
