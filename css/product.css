@@ -192,11 +192,12 @@ body {
 }
 .Comment_list {
   display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
 .Commenr_list-rating {
   display: flex;
   padding: 20px 0px 30px 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
 .Comment_avtar {
   width: 40px;
@@ -282,4 +283,39 @@ label.star:hover {
 label.star:before {
   content: "\f006";
   font-family: FontAwesome;
+}
+.Comment_new {
+  padding: 20px 40px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.Comment_new-text {
+  margin: 5px 15px 0;
+  height: 30px;
+}
+.text {
+  height: 100%;
+  width: 500px;
+  border: 0;
+  border-bottom: 1px solid;
+}
+.Button {
+  margin: 10px 100px 10px;
+  position: relative;
+  width: 100%;
+}
+.bt {
+  margin-left: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(251, 85, 51);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.Button-text {
+  height: 30px;
+  margin-left: 380px;
+  margin-top: 10px;
+  position: relative;
 }
