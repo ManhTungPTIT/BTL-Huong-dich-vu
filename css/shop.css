@@ -130,23 +130,21 @@ header {
   height: 60px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   margin-top: 20px;
   border: 1px solid;
 }
-.Category_Item {
+.Category_item {
   width: 150px;
   margin-left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.List_item {
+.List_Item {
   color: black;
   text-decoration: none;
   text-align: center;
 }
-.List_item:active {
+.List_Item:active {
   color: rgb(201, 160, 235);
 }
