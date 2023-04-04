@@ -4,29 +4,62 @@
   padding: 0;
 }
 .Home {
-  background-color: rgb(127 129 135);
-  display: flex;
-  position: relative;
-}
-.HomeMain {
   position: relative;
 }
 .Main {
+  width: 1200px;
+  position: relative;
+  margin: 25px auto 0;
+  border: 1px solid black;
+  box-shadow: 10px 10px black;
+}
+.Status {
+  border-bottom: 1px solid;
+  height: 25px;
+  color: rgb(174 162 162);
+}
+.Status_text {
+  color: red;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.Title {
+  height: 50px;
+  border-bottom: 1px solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
   display: flex;
-  background-color: white;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px auto 0px;
-  width: 100vw;
 }
-.Table {
-  margin-top: 30px;
-  text-align: center;
-  width: 1000px;
+.User {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px 5px;
+  border-bottom: 1px solid;
 }
-.table {
+.User_infor {
+  font-size: 20px;
+  color: rgb(87 82 81);
+  margin-top: 10px;
+}
+.Day {
+  height: 25px;
+  padding: 5px 0 0 10px;
+  border-bottom: 1px solid;
+  font-size: 17px;
+}
+.text {
+  font-size: 15px;
+  color: rgb(87 82 81);
+  margin-bottom: 10px;
+}
+table {
   width: 100%;
+  text-align: center;
+  border-spacing: 0;
 }
 .product-thumbnail {
   text-align: center;
@@ -81,34 +114,6 @@
   height: auto;
 }
 
-.buttons_added {
-  opacity: 1;
-  display: inline-block;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  white-space: nowrap;
-  vertical-align: top;
-}
-.is-form {
-  overflow: hidden;
-  position: relative;
-  background-color: #f9f9f9;
-  height: 2.2rem;
-  width: 1.9rem;
-  padding: 0;
-  text-shadow: 1px 1px 1px #fff;
-  border: 1px solid #ddd;
-}
-.is-form:focus,
-.input-text:focus {
-  outline: none;
-}
-.is-form.minus {
-  border-radius: 4px 0 0 4px;
-}
-.is-form.plus {
-  border-radius: 0 4px 4px 0;
-}
 .input-qty {
   background-color: #fff;
   height: 2.2rem;
@@ -118,43 +123,26 @@
   display: inline-block;
   vertical-align: top;
   margin: 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-  border-right: 0;
-  padding: 0;
+  border: 0;
 }
 .input-qty::-webkit-outer-spin-button,
 .input-qty::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.btn {
-  text-decoration: none;
-  color: red;
-  cursor: pointer;
-}
-.Button_fun {
-  margin-top: 20px;
-  height: 50px;
-  width: 1000px;
+.Button {
+  height: 45px;
+  width: 120px;
+  background-color: rgb(215 96 66);
   display: flex;
-  justify-content: space-between;
-}
-.fun {
-  background-color: rgb(215 62 30);
-  margin: 0px 15px;
-  width: 150px;
-  border: 0;
-  opacity: 0.8;
-  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px;
+  text-align: center;
   cursor: pointer;
 }
-.Bt {
+.Bt_text {
   color: white;
   text-decoration: none;
-}
-.fun:hover {
-  box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
-  top: -2px;
+  text-align: center;
 }

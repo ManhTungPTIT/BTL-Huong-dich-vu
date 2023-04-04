@@ -165,9 +165,12 @@ body {
 .button_order {
   height: 30px;
   background-color: rgb(251, 235, 237);
-  color: #d0011b;
   border: 1px solid #d0011b;
   cursor: pointer;
+}
+.Order_text {
+  text-decoration: none;
+  color: #d0011b;
 }
 .Comment {
   display: flex;
