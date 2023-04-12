@@ -293,6 +293,14 @@ label.star:before {
   margin: 5px 15px 0;
   height: 30px;
 }
+.new-button {
+  height: 35px;
+  width: 130px;
+  background-color: rgb(251, 85, 51);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
 .text {
   height: 100%;
   width: 500px;
