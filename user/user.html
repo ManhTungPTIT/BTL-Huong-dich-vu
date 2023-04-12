@@ -5,6 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/user.css" />
+    <script>
+      fetch("http://127.0.0.1:8080/api/v1/admin/users", {
+        method: "GET",
+        headers: { content_type: "application/json" },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert(data);
+          const member = data;
+          let memberList = document.getElementById("List_member");
+          alert(memberList);
+          member.forEach((product) => {
+            const productCard = `<tr align="center" valign="center" id="item">
+              <td height="30px" id="STT">
+                1
+              </td>
+              <td id="name">${member.name}</td>
+              <td id="gmail">${member.gmail}</td>
+              <td id="role">${member.role}</td>
+              <td id="address">${member.address}</td>
+              <td id="phone">${member.phobe}</td>
+              <td>
+                <button class="bt" id="btxoa" onclick="deleteProductbyId(${member.id})">
+                  Xóa
+                </button>
+                <a href="/user/user_infor.html" class="Update" id="btEdit">
+                  Chỉnh sửa
+                </a>
+              </td>
+            </tr>`;
+
+            memberList.innerHTML += member;
+          });
+        });
+    </script>
   </head>
   <body>
     <div class="Home">
@@ -16,7 +51,7 @@
           </button>
         </div>
         <div class="List_member">
-          <table width="1190px" border="1">
+          <table width="1190px" border="1" id="List_member">
             <tr>
               <th height="50px">STT</th>
               <th>Username</th>
@@ -27,16 +62,18 @@
               <th>Thao tác</th>
             </tr>
 
-            <tr align="center" valign="center">
-              <td height="30px">1</td>
-              <td>Nguyễn Mạnh Tùng</td>
-              <td>nguyentung191001@gmail.com</td>
-              <td>Người dùng</td>
-              <td>Hà Nội</td>
-              <td>0923123434</td>
+            <tr align="center" valign="center" id="item">
+              <td height="30px" id="STT">1</td>
+              <td id="name">Nguyễn Mạnh Tùng</td>
+              <td id="gmail">nguyentung191001@gmail.com</td>
+              <td id="role">Người dùng</td>
+              <td id="address">Hà Nội</td>
+              <td id="phone">0923123434</td>
               <td>
-                <button class="bt">Xóa</button>
-                <a href="/user/user_infor.html" class="Update">Chỉnh sửa</a>
+                <button class="bt" id="btxoa">Xóa</button>
+                <a href="/user/user_infor.html" class="Update" id="btEdit"
+                  >Chỉnh sửa</a
+                >
               </td>
             </tr>
 

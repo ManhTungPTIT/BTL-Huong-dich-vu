@@ -300,12 +300,12 @@ label.star:before {
   border-bottom: 1px solid;
 }
 .Button {
-  margin: 10px 100px 10px;
+  margin: 20px;
   position: relative;
   width: 100%;
 }
 .bt {
-  margin-left: 20px;
+  margin-right: 20px;
   width: 150px;
   height: 30px;
   background-color: rgb(251, 85, 51);

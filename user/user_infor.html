@@ -5,6 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/user_infor.css" />
+    <script>
+      $(document).ready(function () {
+        $("#btsave").click(function (event) {
+          var wsUrl = "http://127.0.0.1:8080/api/v1/admin/users";
+          var soapRequest =
+            '{"id": null' +
+            "," +
+            '"name": ' +
+            $("#name").val() +
+            "," +
+            '"gmail: ' +
+            $("#gmail").val() +
+            "," +
+            '"price": Người dùng' +
+            "," +
+            '"address": ' +
+            $("#address") +
+            "," +
+            '"phone": ' +
+            $("#phone");
+          alert(soapRequest);
+          $.ajax({
+            type: "POST",
+            url: wsUrl,
+            contentType: "application/json",
+            dataType: "json",
+            data: soapRequest,
+            success: processSuccess,
+            error: processError,
+          });
+        });
+      });
+
+      function processSuccess(data, status, req) {
+        alert("success");
+      }
+
+      function processError(data, status, req) {
+        alert("error " + data.state);
+      }
+    </script>
   </head>
   <body>
     <div class="Home">
@@ -14,28 +55,53 @@
         </div>
         <div class="Main-infor">
           <div class="Infor">
-            <input type="text" class="Infor_text" placeholder="Username" />
+            <input
+              type="text"
+              class="Infor_text"
+              id="name"
+              placeholder="Username"
+            />
           </div>
           <div class="null"></div>
           <div class="Infor">
-            <input type="text" class="Infor_text" placeholder="Gmail" />
+            <input
+              type="text"
+              class="Infor_text"
+              id="gmail"
+              placeholder="Gmail"
+            />
           </div>
           <div class="null"></div>
           <div class="Infor">
-            <input type="text" class="Infor_text" placeholder="role" />
+            <input
+              type="text"
+              class="Infor_text"
+              id="role"
+              placeholder="role"
+            />
           </div>
           <div class="null"></div>
           <div class="Infor">
-            <input type="text" class="Infor_text" placeholder="Address" />
+            <input
+              type="text"
+              class="Infor_text"
+              id="address"
+              placeholder="Address"
+            />
           </div>
           <div class="null"></div>
           <div class="Infor">
-            <input type="text" class="Infor_text" placeholder="Phone" />
+            <input
+              type="text"
+              class="Infor_text"
+              id="phone"
+              placeholder="Phone"
+            />
           </div>
           <div class="null"></div>
         </div>
         <div class="Button_save">
-          <button class="Save">
+          <button class="Save" id="btsave">
             <a href="/user/user.html" class="save">SAVE</a>
           </button>
         </div>
