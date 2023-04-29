@@ -5,41 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/user.css" />
-    <script>
-      fetch("http://127.0.0.1:8080/api/v1/admin/users", {
-        method: "GET",
-        headers: { content_type: "application/json" },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          alert(data);
-          const member = data;
-          let memberList = document.getElementById("List_member");
-          alert(memberList);
-          member.forEach((product) => {
-            const productCard = `<tr align="center" valign="center" id="item">
-              <td height="30px" id="STT">
-                1
-              </td>
-              <td id="name">${member.name}</td>
-              <td id="gmail">${member.gmail}</td>
-              <td id="role">${member.role}</td>
-              <td id="address">${member.address}</td>
-              <td id="phone">${member.phobe}</td>
-              <td>
-                <button class="bt" id="btxoa" onclick="deleteProductbyId(${member.id})">
-                  Xóa
-                </button>
-                <a href="/user/user_infor.html" class="Update" id="btEdit">
-                  Chỉnh sửa
-                </a>
-              </td>
-            </tr>`;
-
-            memberList.innerHTML += member;
-          });
-        });
-    </script>
   </head>
   <body>
     <div class="Home">
@@ -51,60 +16,120 @@
           </button>
         </div>
         <div class="List_member">
-          <table width="1190px" border="1" id="List_member">
-            <tr>
-              <th height="50px">STT</th>
-              <th>Username</th>
-              <th>Gmail</th>
-              <th>Role</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Thao tác</th>
-            </tr>
-
-            <tr align="center" valign="center" id="item">
-              <td height="30px" id="STT">1</td>
-              <td id="name">Nguyễn Mạnh Tùng</td>
-              <td id="gmail">nguyentung191001@gmail.com</td>
-              <td id="role">Người dùng</td>
-              <td id="address">Hà Nội</td>
-              <td id="phone">0923123434</td>
-              <td>
-                <button class="bt" id="btxoa">Xóa</button>
-                <a href="/user/user_infor.html" class="Update" id="btEdit"
-                  >Chỉnh sửa</a
-                >
-              </td>
-            </tr>
-
-            <tr align="center" valign="center">
-              <td height="30px">2</td>
-              <td>Nguyễn Mạnh Tùng</td>
-              <td>tung@gmail.com</td>
-              <td>Người dùng</td>
-              <td>Hà Nội</td>
-              <td>0923123434</td>
-              <td>
-                <button class="bt">Xóa</button>
-                <a href="/user/user_infor.html" class="Update">Chỉnh sửa</a>
-              </td>
-            </tr>
-
-            <tr align="center" valign="center">
-              <td height="30px">3</td>
-              <td>Nguyễn Mạnh Tùng</td>
-              <td>tung@gmail.com</td>
-              <td>Người dùng</td>
-              <td>Hà Nội</td>
-              <td>0923123434</td>
-              <td>
-                <button class="bt">Xóa</button>
-                <a href="/user/user_infor.html" class="Update">Chỉnh sửa</a>
-              </td>
-            </tr>
+          <table width="1190px" border="1" id="list_member">
+            <thead>
+              <tr>
+                <th height="50px">STT</th>
+                <th>Gmail</th>
+                <th>Password</th>
+                <th>User-type</th>
+                <th>Username</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <a href="/user/user_infor.html"></a>
+            <tbody></tbody>
           </table>
         </div>
       </div>
     </div>
+    <script>
+      let apiData = [];
+      const table = document.querySelector("#list_member");
+      var Respone = localStorage.getItem("respone");
+      console.log(Respone);
+
+      fetch("http://127.0.0.1:8080/api/v1/admin/users")
+        .then((response) => response.json())
+        .then((data) => {
+          apiData = data;
+          data.forEach((row) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+            <tr align="center" valign="center" id="item" >
+                <td height="30px" id="Id" class = "item id">${row.id}</td>
+                <td class = "item" id="gmail">${row.email}</td>
+                <td class = "item" id="password">${row.password}</td>
+                <td class = "item" id="user_type">${row.user_type}</td>
+                <td class = "item" id="username">${row.username}</td>
+                <td class = "item" id="address">${row.address}</td>
+                <td class = "item" id="phone">${row.phone}</td>
+                <td>
+                  <button class="bt" id="btxoa" onclick="deleteItem(${row.id})">
+                    <a href="/user/user.html"  class="Update">Xóa</a>
+                    </button>
+                  <button id="btEdit" class="bt btEdit"  >
+                    <a  class="Update" href="/user/user_infor.html" >Chỉnh sửa</a>
+                  </button>
+                </td>
+              </tr>
+          `;
+            table.querySelector("tbody").appendChild(tr);
+          });
+
+          var myButton = document.querySelectorAll("#btEdit");
+          var myID = "";
+          localStorage.setItem("userId", myID);
+
+          if (myButton.length !== 0) {
+            myButton.forEach(function (button, Index) {
+              button.addEventListener("click", function () {
+                myID = apiData[Index].id;
+                localStorage.setItem("userId", myID);
+                // deleteItem(myID);
+              });
+            });
+          }
+        });
+      if (Respone != "") {
+        fetch(`http://127.0.0.1:8080/api/v1/admin/users/${Respone}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            var index;
+            const arr = data;
+
+            localStorage.setItem("respone", "");
+
+            const tbody = table.getElementsByTagName("tbody")[0];
+            const rows = tbody.getElementsByTagName("tr");
+
+            for (let i = 0; i < rows.length; i++) {
+              const cells = rows[i].getElementsByTagName("td");
+              if (cells[0].innerHTML == Respone) {
+                index = i;
+                console.log(index);
+                break;
+              }
+            }
+            console.log(arr.email);
+            rows[index].cells[1].innerText = arr.email;
+            rows[index].cells[2].innerText = arr.password;
+            rows[index].cells[3].innerText = arr.user_type;
+            rows[index].cells[4].innerText = arr.username;
+            rows[index].cells[5].innerText = arr.address;
+            rows[index].cells[6].innerText = arr.phone;
+          });
+      }
+
+      function deleteItem(itemId) {
+        fetch(`http://127.0.0.1:8080/api/v1/admin/users/${itemId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }).then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const itemElement = document.querySelector(
+            `li[data-item-id="${itemId}"]`
+          );
+          itemElement.remove();
+        });
+      }
+    </script>
   </body>
 </html>

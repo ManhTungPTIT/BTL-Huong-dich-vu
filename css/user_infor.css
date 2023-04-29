@@ -59,6 +59,7 @@
 .Button_save {
   margin-top: 30px;
   padding-left: 40px;
+  cursor: pointer;
   display: flex;
   justify-content: flex-end;
 }
@@ -71,4 +72,10 @@
 .save {
   color: white;
   text-decoration: none;
+}
+.role {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 0;
 }

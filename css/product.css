@@ -245,6 +245,11 @@ body {
   word-wrap: break-word;
   width: 600px;
 }
+.input_text {
+  height: 30px;
+  width: 500px;
+  border: 0;
+}
 div.stars {
   width: 270px;
   display: inline-block;
